@@ -51,7 +51,7 @@ export const CartReducer = (storeData, action) => {
             return { ...storeData, cart: [], cartItems: 0, cartPrice: 0 }
         
         default:
-            return storeData || {};
+            return storeData || {cartItems: 0};
 
     }
 }

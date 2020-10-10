@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 export class CartSummary extends Component {
 
     getSummary = () => {
+        
         if (this.props.cartItems > 0) {
             return <span>
                         { this.props.cartItems } item(s),
@@ -15,8 +16,7 @@ export class CartSummary extends Component {
     }
 
     getLinkClasses = () => {
-
-        return `btn btn-sm bg-dark text-white ${ this.props.cartItems === 0 ? "disabled": ""}`;
+        return `btn btn-sm bg-dark text-white ${ !this.props.cartItems > 0 ? "disabled": ""}`;
 
     }
 
